@@ -7,11 +7,11 @@ const path = require('path');
 const sauceRoutes = require('./routes/sauce');
 const userRoutes = require('./routes/user')
 
-mongoose.connect('mongodb+srv://admin:admin1280@cluster0.annas.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://matteo:matteo1280@cluster0.w9je3.mongodb.net/piquente?retryWrites=true&w=majority',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
-  .catch(() => console.log('Connexion à MongoDB échouée !'));
+  .catch((err) => console.log('Connexion à MongoDB échouée !', err));
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
