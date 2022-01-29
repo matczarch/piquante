@@ -32,7 +32,7 @@ exports.login = (req, res, next) => {
                 token: jwt.sign(
                     {userId: user._id},
                     process.env.JWT_SECRET,
-                    { expiresIn: '24h' }
+                    //{ expiresIn: '24h' }
                 )
             });
         })
